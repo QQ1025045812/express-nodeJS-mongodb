@@ -35,6 +35,9 @@ p{
   line-height:38px;
 }
 /* PRODUCT DESCRIBE */
+#section{
+  margin-top:20px;
+}
 #product-describe p{
 
   line-height:34px;

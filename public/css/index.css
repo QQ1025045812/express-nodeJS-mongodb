@@ -54,28 +54,11 @@ section p::before{
   background:#f7f7f7;
   padding:4% 0;
 }
-#product-tree{
-  padding:4% 0;
-}
-#product-tree .desc{
-  padding:0 4.5%;
-}
-#product-four{
-  background:#f7f7f7;
-  padding:4% 0;
-}
 #product-five{
   padding:4% 0;
 }
 #product-five .desc{
   padding:0 2.5%;
-}
-#product-six{
-  background:#f7f7f7;
-  padding:4% 0;
-}
-#product-seven{
-  padding:4% 0;
 }
 .pic{
   padding:6%;

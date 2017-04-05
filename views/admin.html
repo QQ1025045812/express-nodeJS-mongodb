@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>管理员登陆</title>
+  <link rel="stylesheet" href="/public/css/css/bootstrap.css">
+  <link rel="stylesheet" href="/public/css/common.css">
+  <link rel="stylesheet" href="/public/css/index.css">
+</head>
+<body class="modal-open">
+  <header>
+    <div id="top" class="hidden-xs hidden-sm hidden-md"> 
+      <div class="container">
+        <i class="pull-left"><span class="glyphicon glyphicon-home"></span>欢迎来到杭州湘亭科技有限公司</i>
+        <i class="pull-right">客户服务热线：<span class="glyphicon glyphicon-phone-alt"></span>0571-85021585</i>
+    </div>
+    </div>
+  <nav class="navbar">
+	<div class="container">
+		<div class="navbar-header">
+		  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-list" aria-expanded="false">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+		  </button>
+		  <a class="navbar-brand" href="#" id="brand">
+        <span class="iphone"></span>
+			<img src="/public/images/logo.png" alt="">
+		  </a>
+		</div>
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="nav-list">
+				<ul class="nav navbar-nav">
+          <li><a href="#" class="active">首页</a></li>
+          <li><a href="/public/product.html">产品中心</a></li>
+          <li class="hidden-md hidden-sm"><a href="/public/roms.html">ROMS产品</a></li>
+          <li><a href="/public/jianceservice.html">监测服务</a></li>
+          <li class="hidden-md hidden-sm"><a href="/public/service.html">研发售后</a></li>
+          <li class="hidden-md hidden-sm"><a href="/public/about.html">关于湘亭</a></li>
+			  </ul>
+			  <form class="navbar-form navbar-right">
+				<div class="form-group">
+				  <input type="text" class="form-control" placeholder="搜索......">
+				</div>
+				<button type="submit" class="btn btn-primary">搜索</button>
+			  </form>
+		  </div>
+		</div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</header>
+  <section style="margin:8% auto;width:500px;">
+    <form class="form-horizontal">
+  <div class="form-group">
+    <label for="username" class="col-sm-2 control-label">账号：</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="username" placeholder="账号..." id="username">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="password" class="col-sm-2 control-label">密码：</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control" name="password" placeholder="密码..." id="password">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="button" class="btn btn-default" id="sub">登陆</button>
+    </div>
+  </div>
+</form>
+  </section>
+
+  
+  <script src="/public/js/jquery.min.js"></script>
+  <script src="/public/js/bootstrap.js"></script>
+  <script>
+  $("#sub").click(function(){
+    console.log('post')
+    $.ajax({
+      type:'post',
+      url:'/admin/user/login',
+      data:{
+        username:$("#username").val(),
+        password:$("#password").val()
+      },
+      dataType:'json',
+      success:function(result){
+        console.log(result)
+      }
+    })
+  })
+  </script>
+</body>
+</html>

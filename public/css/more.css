@@ -1,5 +1,7 @@
 /* CSS RESET */
-
+#section{
+    margin-top:40px;
+}
 /* PRODUCT */
 .box{
     height:350px;
@@ -94,6 +96,11 @@ img{
   margin:0 auto;
   display:block;
 } 
+.pic-wrap{
+ border:1px solid #f4f4f4;
+ display:block;
+padding:10% 0px;
+}
 .wrap{
   position:absolute;
   top:0;
