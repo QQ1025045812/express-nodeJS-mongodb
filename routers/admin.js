@@ -41,8 +41,7 @@ router.post('/user/login',function(req,res,next){
                 _id:userInfo.id,
                 username:userInfo.username
             }));
-            res.render('houtai.html');
-            // res.json(responseData);
+            res.json(responseData);
             
         }
     })

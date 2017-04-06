@@ -88,7 +88,11 @@
       },
       dataType:'json',
       success:function(result){
-        console.log(result)
+        if(result.code===0){
+          window.location.href="/houtai"
+        }else{
+          alert('当前账号登陆错误，请联系站长')
+        }
       }
     })
   })

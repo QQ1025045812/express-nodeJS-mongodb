@@ -57,6 +57,7 @@ app.use(function(req,res,next){
 app.use('/admin',require('./routers/admin'));
 app.use('/api',require('./routers/api'));
 app.use('/',require('./routers/main'));
+app.use('/houtai',require('./routers/houtai'));
 mongoose.connect('mongodb://localhost:27018/guanwang',function(err){
     if(err){
         console.log("数据库连接失败！！！")
