@@ -1,8 +1,52 @@
 {% extends 'parent.html' %}
 {% block section %}
 <div class="container-fluid">
-  <div class="jumbotron">
-    <p><a class="btn btn-primary btn-lg" href="/admin" role="button">前台首页</a></p>
-  </div>
+  <button class="btn btn-primary">添加纪录</button>
+  <table class="table table-striped table-bordered table-hover text-center">
+    <tr>
+      <th class="text-center">title</th>
+      <th class="text-center">型号</th>
+      <th class="text-center">品牌</th>
+      <th class="text-center">产地</th>
+      <th class="text-center">适用行业</th>
+      <th class="text-center">适用相关标准 /检测方法</th>
+      <th class="text-center">内部编号</th>
+      <th class="text-center">产品简介</th>
+      <th class="text-center">环境条件</th>
+      <th class="text-center"路径l</th>
+      <th class="text-center">操作</th>
+    </tr>
+    {% for chanpin in chanpin %}
+    <tr>
+      <td>{{chanpin.title}}</td>
+      <td>{{chanpin.model}}</td>
+      <td>{{chanpin.brand}}</td>
+      <td>{{chanpin.place}}</td>
+      <td>{{chanpin.hangye}}</td>
+      <td>{{chanpin.standard}}</td>
+      <td>{{chanpin.number}}</td>
+      <td>{{chanpin.desc}}</td>
+      <td>{{chanpin.environment}}</td>
+      <td>{{chanpin.url}}</td>
+      <td></td>
+    </tr>
+    {% endfor %}
+  </table>
 </div>
 {% endblock %}
+
+
+
+
+
+ title:"String",
+  //   model:"String",
+  //   brand:"String",
+  //   place:"String",
+  //   hangye:"String",
+  //   standard:"String",
+  //   number:"String",
+  //   desc:"String",
+  //   environment: [],
+  //   url:"String",
+    

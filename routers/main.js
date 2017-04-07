@@ -3,4 +3,34 @@ var router=express.Router();
 router.get('/',function(req,res,next){
     res.render('index');
 });
+router.get('/index',function(req,res,next){
+    res.render('index');
+});
+router.get('/product',function(req,res,next){
+    res.render('product');
+});
+router.get('/roms',function(req,res,next){
+    res.render('roms');
+});
+router.get('/jianceservice',function(req,res,next){
+    res.render('jianceservice');
+});
+router.get('/service',function(req,res,next){
+    res.render('service');
+});
+router.get('/about',function(req,res,next){
+    res.render('abouts');
+});
+router.get('/zidongzhan',function(req,res,next){
+    res.render('zidongzhan');
+});
+router.get('/yingji',function(req,res,next){
+    res.render('yingji');
+});
+router.get('/moreproducts',function(req,res,next){
+    res.render('moreproducts');
+});
+router.get('/productdetail',function(req,res,next){
+    res.render('productdetail');
+});
 module.exports=router;

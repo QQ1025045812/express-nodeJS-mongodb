@@ -36,9 +36,9 @@ app.use(function(req,res,next){
         try{
         req.userInfo=JSON.parse(req.cookies.get('userInfo'))
         }catch(e){
-
+            
         }
-    };
+    }
     next();
 })
 /**
