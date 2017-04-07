@@ -1,7 +1,10 @@
 var express=require('express');
 var router=express.Router();
+var Banner=require('../models/banner');
 router.get('/',function(req,res,next){
-    res.render('index');
+    Banner.find().then(function(banners){
+        res.render('index',{banners:banners});
+    });
 });
 router.get('/index',function(req,res,next){
     res.render('index');
