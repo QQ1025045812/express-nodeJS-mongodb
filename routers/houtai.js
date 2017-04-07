@@ -141,4 +141,7 @@ router.get('/yanfahoutai',function(req,res,next){
 router.get('/abouthoutai',function(req,res,next){
   res.render('abouthoutai');
 })
+router.get('/banneredit',function(req,res,next){
+  res.render('banneredit');
+})
 module.exports=router;
